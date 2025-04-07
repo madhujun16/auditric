@@ -1,307 +1,102 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Auditric - AI-Powered Compliance Platform</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #ffffff;
-      color: #1a1a1a;
-    }
-    nav {
-      position: sticky;
-      top: 0;
-      background: #ffffff;
-      padding: 1rem 2rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-      flex-wrap: wrap;
-    }
-    nav a {
-      margin: 0.5rem 1rem;
-      color: #1a1a1a;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    nav .cta-nav {
-      background: #10b981;
-      color: white;
-      padding: 0.5rem 1.5rem;
-      border-radius: 0.5rem;
-      font-weight: 600;
-    }
-    header {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      background: linear-gradient(135deg, #0f172a, #1e3a8a);
-      color: #ffffff;
-      padding: 5rem 2rem 3rem;
-    }
-    .hero-text {
-      flex: 1 1 100%;
-      padding-right: 2rem;
-    }
-    .hero-text h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    .hero-text p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-    .hero-img {
-      flex: 1 1 100%;
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .hero-img img {
-      width: 100%;
-      max-width: 500px;
-      border-radius: 1rem;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    }
-    section {
-      max-width: 1200px;
-      margin: auto;
-      padding: 2rem 2rem;
-    }
-    h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 2rem;
-    }
-    .features, .industries, .testimonials {
-      display: grid;
-      gap: 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-    .feature, .industry, .testimonial {
-      background: #f9fafb;
-      padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    }
-    .feature img {
-      width: 100%;
-      border-radius: 0.75rem;
-      margin-top: 1rem;
-    }
-    .cta-bottom {
-      background: #1e3a8a;
-      color: #ffffff;
-      text-align: center;
-      padding: 2rem 2rem;
-    }
-    .cta-bottom form {
-      max-width: 500px;
-      margin: 2rem auto 0;
-    }
-    .cta-bottom input[type="text"],
-    .cta-bottom input[type="email"] {
-      width: 100%;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      border-radius: 0.5rem;
-      border: none;
-    }
-    .cta-bottom button {
-      background: #10b981;
-      color: white;
-      padding: 1rem 2.5rem;
-      font-weight: 700;
-      border-radius: 0.75rem;
-      border: none;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    .cta-bottom button:hover {
-      background: #059669;
-    }
-    footer {
-      background: #0f172a;
-      color: white;
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.875rem;
-    }
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        text-align: center;
-      }
-      .hero-text, .hero-img {
-        flex: 1 1 100%;
-        padding: 0;
-      }
-    }
-  </style>
-  
-</head>
-<body>
-  <nav>
-    <div><strong>Auditric</strong></div>
-    <div>
-      <a href="#features">Features</a>
-      <a href="#industries">Industries</a>
-      <a href="#testimonials">Testimonials</a>
-      <a href="#Pricing">Pricing</a>
-      <a href="#">Login</a>
-    </div>
-  </nav>
+import React from "react";
+import { Button } from "@/components/ui/button";
 
-  <header>
-    <div class="hero-text">
-      <h1>Modern Compliance Starts Here</h1>
-      <p>Auditric helps your team stay ahead of audits, reduce risk, and simplify compliance with AI-powered tools and smart automation.</p>
-    </div>
-    <div class="hero-img">
-      <img src="https://www.jsums.edu/auditor/files/2023/05/risk-management-e1684126879759.jpg" alt="Dashboard Preview">
-    </div>
-  </header>
+export default function AuditricHomePage() {
+  return (
+    <div className="bg-white text-gray-900 font-sans">
+      {/* Header */}
+      <header className="flex items-center justify-between p-6 bg-blue-700 text-white shadow-md">
+        <h1 className="text-2xl font-bold">Auditric</h1>
+        <nav className="space-x-6">
+          <a href="#features" className="hover:underline">Features</a>
+          <a href="#solutions" className="hover:underline">Solutions</a>
+          <a href="#resources" className="hover:underline">Resources</a>
+          <a href="#about" className="hover:underline">About</a>
+          <a href="#contact" className="hover:underline">Contact</a>
+        </nav>
+        <Button className="bg-white text-blue-700 hover:bg-blue-100">Get Started</Button>
+      </header>
 
-<section id="features">
-  <h2>Features</h2>
-  <div class="features">
-    <div class="feature">
-      <h3>AI-Powered Insights</h3>
-      <p>Generates audit and risk analysis.</p>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDTH0LwS9F6PfaLHagKZwZCakk4SXanOjCyw&s alt="AI Insights Icon" style="width: 80px; height: 80px; margin-top: 1rem;">
-    </div>
-    <div class="feature">
-      <h3>Audit Management</h3>
-      <p>Find audit and risk tracking via smart dashboards.</p>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJbzdEMgdT0ZzEeMx2NZd-cO8p3LGis4_2BA&s" alt="Audit Management">
-    </div>
-    <div class="feature">
-      <h3>Risk Register</h3>
-      <p>Manage safety and regulatory threats with heatmaps and scoring.</p>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAoHe1FjRbDLyiUu9OU1YGrnm4LIp98rKOxA&s" alt="Risk Register">
-    </div>
-    <div class="feature">
-      <h3>Mobile Access</h3>
-      <p>Manage audits on the go from any device.</p>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgzECzMg7Efj_6SkpoatPzig8L96-91rGH0A&s" alt="Mobile Access">
-    </div>
-  </div>
-</section>
+      {/* Hero Section */}
+      <section className="text-center py-20 bg-gradient-to-r from-blue-600 to-blue-400 text-white">
+        <h2 className="text-4xl font-bold mb-4">Empower Your Team to Ensure Compliance and Safety</h2>
+        <p className="text-lg mb-6">Streamline inspections, manage assets, and resolve issues — all in one place.</p>
+        <Button className="text-lg px-6 py-3 bg-white text-blue-700 hover:bg-blue-100">Schedule a Demo</Button>
+        <img
+          src="/assets/hero.jpg"
+          alt="Compliance hero"
+          className="mt-10 mx-auto max-w-4xl rounded-lg shadow-lg"
+        />
+      </section>
 
-<section id="industries">
-  <h2>Built for Your Industry</h2>
-  <div class="industries">
-    <div class="industry">
-      <h3>🍽️ Food Services</h3>
-      <p>Food safety audits, hygiene logs, and compliance checklists.</p>
-    </div>
-    <div class="industry">
-      <h3>🏥 Healthcare</h3>
-      <p>Protect safety and ensure HIPAA/GDPR regulatory compliance.</p>
-    </div>
-    <div class="industry">
-      <h3>💰 Finance</h3>
-      <p>SOX-compliant audits and smart risk assessments.</p>
-    </div>
-  </div>
-</section>
+      {/* Features */}
+      <section id="features" className="py-16 px-8 bg-gray-50">
+        <h3 className="text-3xl font-semibold text-center mb-10">Core Features</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {[
+            ["Digital Checklists", "Create and manage inspections on any device.", "/assets/checklists.jpg"],
+            ["Training Tools", "Train teams with compliance modules.", "/assets/training.jpg"],
+            ["Asset Management", "Track equipment and maintenance logs.", "/assets/assets.jpg"],
+            ["Issue Reporting", "Log incidents and hazards instantly.", "/assets/issues.jpg"],
+            ["Task Assignment", "Assign and monitor compliance tasks.", "/assets/tasks.jpg"],
+            ["Communication", "Share critical updates with your team.", "/assets/communication.jpg"]
+          ].map(([title, desc, img], i) => (
+            <div key={i} className="bg-white p-6 rounded-lg shadow hover:shadow-xl transition">
+              <img src={img} alt={title} className="rounded-md h-40 w-full object-cover mb-4" />
+              <h4 className="text-xl font-bold mb-2 text-blue-700">{title}</h4>
+              <p className="text-gray-600">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
-<section id="testimonials">
-  <h2>Testimonials</h2>
-  <div class="testimonials">
-    <div class="testimonial">
-      <p>“Auditric has transformed our compliance process. The AI insights are invaluable!”</p>
-      <strong>Sarah D. – Compliance Manager</strong>
-    </div>
-    <div class="testimonial">
-      <p>“It’s like having a digital compliance expert in-house. Very intuitive and robust.”</p>
-      <strong>Raj P. – Risk & Controls Lead</strong>
-    </div>
-  </div>
-</section>
-  <section id="features">
-  <h2>Why Auditric?</h2>
-  <div class="features">
-    <div class="feature">
-      <h3>Audit Automation</h3>
-      <p>Smart workflows and dashboards make managing audits seamless and efficient.</p>
-      <img src="https://images.unsplash.com/photo-1591696331119-d28e5a7b1a94?auto=format&fit=crop&w=800&q=80" alt="Audit Automation UI">
-    </div>
-    <div class="feature">
-      <h3>Risk Register</h3>
-      <p>Dynamic heatmaps and scoring help prioritize and mitigate organizational risks.</p>
-      <img src="https://images.unsplash.com/photo-1665686304027-98c00a13b68f?auto=format&fit=crop&w=800&q=80" alt="Risk Register UI">
-    </div>
-    <div class="feature">
-      <h3>Incident Tracking</h3>
-      <p>Multimedia reporting, root cause logging, and alerts — all in one place.</p>
-      <img src="https://images.unsplash.com/photo-1581091226825-0f72e87c4c3c?auto=format&fit=crop&w=800&q=80" alt="Incident UI">
-    </div>
-  </div>
-</section>
+      {/* Solutions */}
+      <section id="solutions" className="py-16 px-8 bg-gradient-to-r from-blue-50 to-blue-100">
+        <h3 className="text-3xl font-semibold text-center mb-10">Solutions for Every Industry</h3>
+        <p className="text-center max-w-3xl mx-auto text-gray-700 mb-6">
+          Auditric adapts to construction, manufacturing, healthcare, and more. From risk management to sustainability, our tools help your business stay compliant.
+        </p>
+        <img
+          src="/assets/industry.jpg"
+          alt="Industry solutions"
+          className="mx-auto mt-6 max-w-4xl rounded-md shadow-md"
+        />
+      </section>
 
-<section id="industries">
-  <h2>Industries We Serve</h2>
-  <div class="industries">
-    <div class="industry">
-      <h3>Food Services</h3>
-      <p>Digitize food safety, hygiene checklists, and kitchen inspections with ease.</p>
-    </div>
-    <div class="industry">
-      <h3>Healthcare</h3>
-      <p>Ensure HIPAA/GDPR compliance, log incidents, and manage patient data audits.</p>
-    </div>
-    <div class="industry">
-      <h3>Finance</h3>
-      <p>Stay audit-ready with SOX-compliant workflows and risk controls.</p>
-    </div>
-  </div>
-</section>
+      {/* Testimonials */}
+      <section className="py-16 px-8 bg-white">
+        <h3 className="text-3xl font-semibold text-center mb-10">What Our Clients Say</h3>
+        <div className="max-w-4xl mx-auto text-center text-gray-700 italic">
+          “Auditric transformed the way we manage compliance. Our audits are faster, more accurate, and fully digital.” – Jane D., Compliance Manager
+        </div>
+      </section>
 
-<section id="testimonials">
-  <h2>What Our Users Say</h2>
-  <div class="testimonials">
-    <div class="testimonial">
-      <p>“Auditric is our compliance sidekick. It's easy, powerful, and saves us hours each week!”</p>
-      <strong>- Quality Manager, FoodChainX</strong>
+      {/* Resources */}
+      <section id="resources" className="py-16 px-8 bg-blue-50">
+        <h3 className="text-3xl font-semibold text-center mb-10 text-blue-700">Resources</h3>
+        <ul className="text-center space-y-4 text-gray-700">
+          <li>📘 Blog: Best practices for safety and compliance</li>
+          <li>🔧 Help Center: User guides and support</li>
+        </ul>
+      </section>
+
+      {/* About & Contact */}
+      <section id="about" className="py-16 px-8 bg-white">
+        <h3 className="text-3xl font-semibold text-center mb-10">About Auditric</h3>
+        <p className="max-w-3xl mx-auto text-center text-gray-700">
+          Our mission is to help companies around the world improve safety and compliance through smart digital tools.
+        </p>
+      </section>
+
+      <section id="contact" className="py-16 px-8 bg-blue-100 text-center">
+        <h3 className="text-3xl font-semibold mb-6 text-blue-800">Get in Touch</h3>
+        <p>Email us at <a href="mailto:support@auditric.com" className="text-blue-700 underline">support@auditric.com</a></p>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-blue-900 text-white py-8 text-center">
+        <p>&copy; {new Date().getFullYear()} Auditric. All rights reserved.</p>
+      </footer>
     </div>
-    <div class="testimonial">
-      <p>“No more spreadsheet chaos! Our audits and incidents are now seamless.”</p>
-      <strong>- Risk Officer, HealthCore</strong>
-    </div>
-  </div>
-</section>
-  <section class="cta-bottom">
-    <h2>Join Our Waiting List</h2>
-    <p>If you're interested in using Auditric, leave your contact details and we'll get back to you soon.</p>
-    <form action="https://script.google.com/macros/s/AKfycbwFQHISJpIR44QvgFQBk2gLidoN9fcwNOVaBKCN3wM/dev" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="text" name="company" placeholder="Company Name" required>
-      <select name="interest" required style="width: 100%; padding: 1rem; margin-bottom: 1rem; border-radius: 0.5rem; border: none;">
-        <option value="" disabled selected>Select Area of Interest</option>
-        <option value="Audit">Audit</option>
-        <option value="Risk Management">Risk Management</option>
-        <option value="Incident Tracking">Incident Tracking</option>
-        <option value="Food Safety & Hygiene">Food Safety & Hygiene</option>
-        <option value="Healthcare Compliance">Healthcare Compliance</option>
-        <option value="Finance & SOX">Finance & SOX</option>
-        <option value="Mobile Solutions">Mobile Solutions</option>
-        <option value="AI-Powered Insights">AI-Powered Insights</option>
-      </select>
-      <textarea name="message" placeholder="Any specific goals or questions?" rows="4" style="width:100%; padding:1rem; margin-bottom:1rem; border-radius:0.5rem; border:none;"></textarea>
-      <button type="submit">Join Waiting List</button>
-    </form>
-  </section>
-  <footer>
-    &copy; 2025 Auditric Inc. All rights reserved. | Privacy | Terms | Contact
-  </footer>
-</body>
-</html>
+  );
+}
